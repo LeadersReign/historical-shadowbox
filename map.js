@@ -20,8 +20,8 @@ fetch('data.json')
       
       // When a marker is clicked, populate and show the sidebar
     	marker.on('click', () => {
-  	   document.getElementById('event-title').innerText = event.title;
-	   document.getElementById('event-description').innerText = event.description;
+  	   document.getElementById('sidebar-title').innerText = event.title;
+	   document.getElementById('sidebar-description').innerText = event.description;
 	   document.getElementById('sidebar').classList.add('active');
 	});
 
