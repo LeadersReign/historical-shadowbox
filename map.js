@@ -9,6 +9,8 @@ var Stadia_StamenTonerBackground = L.tileLayer('https://tiles.stadiamaps.com/til
 	ext: 'png'
 });
 
+Stadia_StamenTonerBackground.addTo(map);
+
 // Load data
 fetch('data.json')
   .then(response => response.json())
