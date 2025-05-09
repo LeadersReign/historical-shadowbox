@@ -18,9 +18,13 @@ html, body, #map {
   transition: transform 0.3s ease-in-out;
   padding: 20px;
   overflow-y: auto;
-  display: none;
-  z-index: 200; /* higher than Leaflet's map layer */
+  z-index: 200;
 }
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
 
 .sidebar.active {
   transform: translateX(0);
