@@ -17,5 +17,21 @@ fetch('data.json')
     data.events.forEach(event => {
       const marker = L.marker(event.coords).addTo(map);
       marker.bindPopup(`<strong>${event.title}</strong><br>${event.description}`);
+      
+      // When a marker is clicked, populate and show the sidebar
+      marker.on('click', () => {
+        // Fill the sidebar with event info
+        document.getElementById('event-title').textContent = event.title;
+        document.getElementById('event-description').textContent = event.description;
+
+        // Add any additional dynamic data as needed
+        // Example: document.getElementById('event-date').textContent = event.date;
+
+        // Show the sidebar by adding 'active' class
+        document.getElementById('sidebar').classList.add('active');
+      });
     });
   });
+
+
+
