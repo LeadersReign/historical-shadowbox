@@ -1,14 +1,8 @@
-html, body {
+html, body, #map {
   height: 100%;
   margin: 0;
   padding: 0;
-}
-
-#map {
-  height: 100%;
-  width: 100%
   z-index: 100
-  position: absolute;
 }
 
 /* Basic sidebar styling */
@@ -24,7 +18,8 @@ html, body {
   transition: transform 0.3s ease-in-out;
   padding: 20px;
   overflow-y: auto;
-  z-index: 200;
+  display: none;
+  z-index: 200; /* higher than Leaflet's map layer */
 }
 
 .sidebar.active {
@@ -45,5 +40,3 @@ html, body {
   font-size: 20px;
   cursor: pointer;
 }
-
-
