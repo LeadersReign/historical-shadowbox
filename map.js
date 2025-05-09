@@ -2,7 +2,7 @@
 const map = L.map('map').setView([40.8, -96.7], 6); // Nebraska
 
 // Add OpenStreetMap tiles
-L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg', {
+L.tileLayer('https://stamen-tiles.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png', {
   attribution: '&copy; Stamen Design'
 }).addTo(map);
 
