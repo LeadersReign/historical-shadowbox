@@ -17,10 +17,12 @@ html, body, #map {
   transition: transform 0.3s ease-in-out;
   padding: 20px;
   overflow-y: auto;
+  display: none;
 }
 
 .sidebar.active {
   transform: translateX(0);
+  display: block;
 }
 
 #sidebar-content h2 {
