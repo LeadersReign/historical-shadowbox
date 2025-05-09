@@ -20,9 +20,9 @@ fetch('data.json')
       
       // When a marker is clicked, populate and show the sidebar
       marker.on('click', () => {
-        // Fill the sidebar with event info
-        document.getElementById('event-title').textContent = event.title;
-        document.getElementById('event-description').textContent = event.description;
+        document.getElementById('sidebar-title').innerText = event.title;
+  	document.getElementById('sidebar-description').innerText = event.description;
+
 
         // Add any additional dynamic data as needed
         // Example: document.getElementById('event-date').textContent = event.date;
