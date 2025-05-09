@@ -19,22 +19,21 @@ fetch('data.json')
       marker.bindPopup(`<strong>${event.title}</strong><br>${event.description}`);
       
       // When a marker is clicked, populate and show the sidebar
-      marker.on('click', () => {
-        document.getElementById('sidebar-title').innerText = event.title;
-  	document.getElementById('sidebar-description').innerText = event.description;
+    	marker.on('click', () => {
+  	   document.getElementById('event-title').innerText = event.title;
+	   document.getElementById('event-description').innerText = event.description;
+	   document.getElementById('sidebar').classList.add('active');
+	});
 
-
-        // Add any additional dynamic data as needed
-        // Example: document.getElementById('event-date').textContent = event.date;
-
-        // Show the sidebar by adding 'active' class
-        document.getElementById('sidebar').classList.add('active');
       });
     });
   });
 
 function closeSidebar() {
+  document.getElementById('close-sidebar').addEventListener('click', () => {
   document.getElementById('sidebar').classList.remove('active');
+});
+
 }
 
 
