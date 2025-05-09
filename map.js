@@ -20,12 +20,19 @@ fetch('data.json')
       
       // When a marker is clicked, populate and show the sidebar
       marker.on('click', () => {
+        // Debugging - log the data to check if it's coming through
+        console.log(event); 
+
+        // Populate the sidebar content with event title and description
         document.getElementById('sidebar-title').innerText = event.title;
         document.getElementById('sidebar-description').innerText = event.description;
+
+        // Show the sidebar
         document.getElementById('sidebar').classList.add('active');
       });
     });
-  });
+  })
+  .catch(error => console.error("Error loading data: ", error));
 
 function closeSidebar() {
   document.getElementById('close-sidebar').addEventListener('click', () => {
