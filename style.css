@@ -1,8 +1,14 @@
-html, body, #map {
+html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+#map {
+  height: 100%;
+  width: 100%
   z-index: 100
+  position: absolute;
 }
 
 /* Basic sidebar styling */
@@ -20,11 +26,6 @@ html, body, #map {
   overflow-y: auto;
   z-index: 200;
 }
-
-.sidebar.active {
-  transform: translateX(0);
-}
-
 
 .sidebar.active {
   transform: translateX(0);
