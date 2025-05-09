@@ -33,5 +33,9 @@ fetch('data.json')
     });
   });
 
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('active');
+}
+
 
 
