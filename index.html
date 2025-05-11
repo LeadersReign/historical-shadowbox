@@ -11,6 +11,12 @@
   />
 </head>
 <body>
+  <div id="sidebar" class="sidebar hidden">
+  <button onclick="closeSidebar()" class="close-btn">×</button>
+  <div id="sidebar-content">
+    <!-- Content will be injected here -->
+  </div>
+</div>
   <div id="map"></div>
   <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
   <script src="map.js"></script>
